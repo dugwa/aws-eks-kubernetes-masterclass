@@ -8,7 +8,7 @@ spec:
     matchLabels:
       app: mysql
   strategy:
-    type: Recreate 
+    type: Recreate #All existing Pods are killed before new ones are created when
   template: 
     metadata: 
       labels: 

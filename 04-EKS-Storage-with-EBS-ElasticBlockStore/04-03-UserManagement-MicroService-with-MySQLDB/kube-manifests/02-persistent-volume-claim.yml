@@ -4,7 +4,7 @@ metadata:
   name: ebs-mysql-pv-claim
 spec: 
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteOnce # the volume can be mounted as read-write by a single node
   storageClassName: ebs-sc
   resources: 
     requests:
