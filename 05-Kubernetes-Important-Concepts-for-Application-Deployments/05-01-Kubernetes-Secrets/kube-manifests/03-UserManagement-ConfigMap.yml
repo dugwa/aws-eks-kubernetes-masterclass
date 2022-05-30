@@ -5,4 +5,8 @@ metadata:
 data: 
   mysql_usermgmt.sql: |-
     DROP DATABASE IF EXISTS usermgmt;
-    CREATE DATABASE usermgmt; 
+    CREATE DATABASE usermgmt;
+  db_hostname: "mysql"
+  db_port: "3306"
+  db_name: "usermgmt"
+  db_username: "root"

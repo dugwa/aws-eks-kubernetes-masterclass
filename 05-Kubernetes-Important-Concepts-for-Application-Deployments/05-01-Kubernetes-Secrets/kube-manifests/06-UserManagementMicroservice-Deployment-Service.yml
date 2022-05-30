@@ -21,15 +21,29 @@ spec:
             - containerPort: 8095           
           env:
             - name: DB_HOSTNAME
-              value: "mysql"            
+              valueFrom:
+                configMapKeyRef:
+                  name: usermanagement-dbcreation-script
+                  key: db_hostname
             - name: DB_PORT
-              value: "3306"            
+              valueFrom:
+                configMapKeyRef:
+                  name: usermanagement-dbcreation-script
+                  key: db_port
             - name: DB_NAME
-              value: "usermgmt"            
+              valueFrom:
+                configMapKeyRef:
+                  name: usermanagement-dbcreation-script
+                  key: db_name
             - name: DB_USERNAME
-              value: "root"            
+              valueFrom:
+                configMapKeyRef:
+                  name: usermanagement-dbcreation-script
+                  key: db_username
             - name: DB_PASSWORD
               valueFrom:
                 secretKeyRef:
                   name: mysql-db-password
-                  key: db-password             
+                  key: db-password
+
+                  dbpassword11
